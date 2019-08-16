@@ -1,0 +1,41 @@
+instalar nodejs
+v10.06.0
+para instalar la version requerida
+https://comoinstalar.info/nodejs-en-linux/
+
+instalar npm
+mkdir webpack-4
+crear una carpeta webpack-4
+
+npm init
+
+instalar webpack
+
+npm install webpack --save
+
+dependencias core
+dependencias de desarrollo
+
+npm install webpack@4.32.2 --save-dev --save-exact
+
+webpack@4.32.2  //para instalar la versión del webpack
+--save-dev //para instalar la dependencias de desarrollo
+--save-exact //para instalar la version exacta cuando se descargue el programa
+
+desde la version 4 se requiere instalar CLI: Command Line Interface
+npm install webpack-cli --save-dev --save-exact
+
+npx //para llamar la dependencias solo en el proyecto
+npx webpack -v //para ver la version instalada
+
+
+//pasamos el archivo que deseamos por webpack
+npx webpack --entry ./index.js --output bundle.js
+
+np webpack --entry ./index.js --output bundle.js --mode development
+np webpack --entry ./index.js --output bundle.js --mode production
+
+modo de defecto es produccion 
+
+
+
