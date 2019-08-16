@@ -32,10 +32,62 @@ npx webpack -v //para ver la version instalada
 //pasamos el archivo que deseamos por webpack
 npx webpack --entry ./index.js --output bundle.js
 
-np webpack --entry ./index.js --output bundle.js --mode development
-np webpack --entry ./index.js --output bundle.js --mode production
+npx webpack --entry ./index.js --output bundle.js --mode development
+npx webpack --entry ./index.js --output bundle.js --mode production
 
 modo de defecto es produccion 
 
+//INICIANDO UN webpack.config
 
+Para ejecutar comandos de webpack hay diferentes caminos 🛤. Anteriormente ejecutamos un comando con NPX para transpilar un archivos .JS y generarlo especificando un OUTPUT, pero esto puede ser en la práctica algo que quite más tiempo y engorroso.
+
+Para ello se puede crear un archivo de configuración de webpack. El nombre de este archivo en teoría puede ser cualquiera pero se recomienda llamarlo webpack.config.js.
+
+Dentro de este archivo se especificarán las acciones que queramos que webpack haga por nosotros. El archivo de ejemplo es este:
+
+const path = require(‘path’) /*este es un modulo de node y se encarga de la gestion de rutas*/
+
+/*Para exportar un modulo, se debe hacer de la forma de commonJS*/
+module.exports = {
+    entry: ‘./index.js’, /*El archivo que queremos transpilar */
+    mode: ‘development’, /* modo de ejecución */
+    output:{ /*Configuraciones para el archivo final que generará webpack */
+        path: path.resolve(__dirname), /* La ruta en donde quedará el archivo final */
+        filename: ‘bundle.js’ /*El nombre con el que se creará el archivo final */
+    } 
+}
+
+
+
+
+Una vez se tenga esta configuración ⚙️ se puede llamar de dos maneras ✌🏽:
+
+con npx: Se puede llamar con este comando para que webpack tome el archivo de configuración y haga su proceso con base en este. El comando es
+
+npx webpack
+
+con npm: Dentro del archivo .JSON, dentro del objeto scripts se puede configurar un comando para ser llamado directamente por npm. El comando que se añadirá es: build, que a su vez llamará a webpack
+
+“scripts”:{
+    “build”: “webpack” //build sera el nombre que usaremos en consola
+}
+
+Para ejecutarlo basta con escribir en la consola 🤩:
+
+npm run webpack 
+
+
+//importando el modulo path
+const path = require('path');
+
+//exportar el modulo
+
+module.exports = {
+  entry: './index.js',
+  mode: 'development',
+  output: {
+    path: path.resolve(__dirname),
+    filename: 'bundle.js'
+  }
+}
 
