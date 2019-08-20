@@ -124,3 +124,9 @@ Tambien se agregaron 3 cmandos en npm scripts para probar las diferentes ejecuci
   Importante flag --config
 
   Carpeta dist : distribution como para referirse que es producto de distribución o producto final
+
+
+Múltiples puntos de entrada
+
+[name] corresponde a los nombres de key que se coloco en el entry
+
