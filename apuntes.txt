@@ -91,3 +91,36 @@ module.exports = {
   }
 }
 
+Cargando configuraciones por defecto y personalizadas
+Por medio del uso de la bandera --config podemos especificar un archivo de configuración externo con el nombre que queramos en lugar del nombre por defecto webpack.config.js.
+
+Resumen de clase:
+
+En esta clase se agrego una configuracion de webpack diferentes para un build externo. para eso se agrego.
+dentro de la carpeta externals un webpack.config.js
+con la siguiente configuracion
+
+const path = require('path')
+
+module.exports = {
+  entry: path.resolve(__dirname, 'index.js'),
+  mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist' ),
+    filename: 'bundle.js'
+  }
+}
+
+donde le indicamos que nuestro bundle se guarde dentro de la carpeta dist.
+
+Tambien se agregaron 3 cmandos en npm scripts para probar las diferentes ejecuciones.
+
+"scripts": {
+    "build": "webpack --entry ./index.js --output ./bundle.js --mode development",
+    "build:local": "webpack --mode production",
+    "build:external": "webpack --config ./external/webpack.config.js"
+  },
+
+  Importante flag --config
+
+  Carpeta dist : distribution como para referirse que es producto de distribución o producto final
