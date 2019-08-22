@@ -130,3 +130,24 @@ Múltiples puntos de entrada
 
 [name] corresponde a los nombres de key que se coloco en el entry
 
+Manejo de assets con Loaders
+Los Loaders son la funcionalidad que nos da Webpack para interpretar tipos de archivos no soportados de forma nativa por Javascript.
+
+style-loader sirve para inyectar un tag style (el CSS) al DOM de nuestro HTML, mientras que css-loader sólo sirve para interpretar archivos CSS.
+
+test: /\.css$/  Expresión regular para que coja cualquier archivo terminado en .css
+
+Webpack pretende usar javascript como la base de operaciones de tu App
+
+Los loaders nos permiten transpilar css a js.
+Css loader es quien transpila mi css al js.
+style loader es quien lo carga a mi HTML.
+Comandos usados:
+
+
+$ npm install --save-dev --save-exact style-loader
+$ npm install --save-dev --save-exact style-loader
+
+$ npm install --save-dev --save-exact css-loader
+$ npm install --save-dev --save-exact css-loader@2.1.1
+
