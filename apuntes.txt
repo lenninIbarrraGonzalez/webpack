@@ -201,3 +201,19 @@ y modificamos en package.json
 "build:dev": "webpack --config ./webpack-dev-server/webpack.config.js"
 
 "build:dev": "webpack-dev-server --config ./webpack-dev-server/webpack.config.js"
+
+
+HOT MODULE REPLACE -
+
+para no recargar toda la pagina, solo recargargar las partes importantes.
+
+
+//en modo de recargar en caliente
+devServer:{
+    hot:true
+  },
+
+Para produccion sirven los archivos css para desarrollo es mejor inyectarlos por mayor
+rapidez 
+
+
