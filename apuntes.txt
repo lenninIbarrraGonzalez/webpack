@@ -174,4 +174,30 @@ plugins: [
     })
   ]
 
+
+SERVIDOR DE desarrollo
+
+ "build:dev": "webpack --config ./webpack-dev-server/webpack.config.js"
+
+ --watch  //Flag para estar escuchando
+  "build:dev": "webpack --config ./webpack-dev-server/webpack.config.js --watch"
+  "build:dev": "webpack --config ./webpack-dev-server/webpack.config.js --w"
   
+o combinar lo de dos  mundos
+
+npm run build:dev -- -w 
+
+para dejar de escucahr con Control + C
+
+Esto permite hacer cambios y guardar si necesidad de ejecutar nuevamente npm run build:dev
+
+ahora queremos no tener que recargar el explorador, para esto intalamos 
+
+npm install -D --save-exact webpack-dev-server 
+npm install -D --save-exact webpack-dev-server@3.5.1
+
+y modificamos en package.json 
+
+"build:dev": "webpack --config ./webpack-dev-server/webpack.config.js"
+
+"build:dev": "webpack-dev-server --config ./webpack-dev-server/webpack.config.js"
