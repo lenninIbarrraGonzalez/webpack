@@ -230,3 +230,12 @@ npm install --save-dev --save-exact @babel/core@ babel-loader @babel/preset-env
 babel-loader //va a enterder los archivos js y se los pasa al core
 
 
+Trabajando con Javascript moderno
+
+Para que los navegadores antiguos entiendan ecmascript 6 debemos hacer lo siguiente
+
+npm install --save-dev --save-exact @babel/plugin-transform-runtime
+
+y ademas la dependencia siguietne pero no como desarrollador
+
+npm install --save --saveexact @babel/runtime

@@ -1,5 +1,5 @@
-function text(){
-  document.body.innerHTML =  '<p>Recargando en caliente...</p>'
+const text = () => {
+  document.body.innerHTML =  '<p>Usando Babel...</p>'
 }
 
 export default text 
